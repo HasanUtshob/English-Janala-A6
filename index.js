@@ -110,7 +110,6 @@ document.getElementById("login-btn").addEventListener("click", () => {
     if (checkPass === "123456") {
       Swal.fire({
         title: "অভিনন্দন &#128525;",
-        text: "উস্তাদ আসসালামু আলাইকুম ",
         icon: "success",
         draggable: true,
       });
@@ -133,7 +132,6 @@ document.getElementById("login-btn").addEventListener("click", () => {
 document.getElementById("btn-logout").addEventListener("click", () => {
   Swal.fire({
     title: "ধন্যবাদ &#128530;",
-    text: "উস্তাদ নম্বরটা একটু বাড়ায় দিয়েন",
     icon: "success",
     draggable: true,
   });
