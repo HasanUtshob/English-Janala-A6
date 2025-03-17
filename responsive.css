@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  /* ছোট স্ক্রিনের জন্য স্টাইল */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+}

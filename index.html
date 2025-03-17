@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala</title>
+    <!-- Tailwind & Daisy ui connect -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+
+      .active {
+        background-color: blue;
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .hide {
+        display: none;
+      }
+
+      #navbar-section {
+        z-index: 1000;
+      }
+
+      .collapse-content {
+        transition: max-height 0.3s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="">
+      <!-- <nav id="navbar-section" class="bg-[#C6BDBD40] fixed w-full">
+        <div class="w-11/12 mx-auto navbar -mt-[100px]">
+          <div class="flex-1">
+            <div class="flex items-center">
+              <h2 class="text-2xl font-bold">ENGLISH</h2>
+              <img src="assets/logo.png" alt="" />
+              <h2 class="text-2xl font-bold font-[noto-normal]">জানালা</h2>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <button
+              onclick="smoothScroll('Fq-section')"
+              class="btn btn-md text-[#422AD5] border-[#422AD5] hover:bg-blue-700 hover:text-white"
+            >
+              <i class="fa-solid fa-circle-question"></i>FAQ
+            </button>
+            <button
+              onclick="smoothScroll('Vocabulary-Container')"
+              class="btn btn-md text-[#422AD5] border-[#422AD5] hover:bg-blue-700 hover:text-white"
+            >
+              <i class="fa-brands fa-leanpub"></i> Learn
+            </button>
+            <button
+              id="btn-logout"
+              class="btn btn-md text-[#422AD5] border-[#422AD5] hover:bg-blue-700 hover:text-white"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i>Logout
+            </button>
+          </div>
+        </div>
+      </nav> -->
+      <nav id="navbar-section" class="bg-[#C6BDBD40] fixed w-full">
+        <div class="w-11/12 mx-auto navbar -mt-[100px] flex-col md:flex-row">
+          <div class="flex-1">
+            <div class="flex items-center justify-center md:justify-start">
+              <h2 class="text-2xl font-bold">ENGLISH</h2>
+              <img src="assets/logo.png" alt="" />
+              <h2 class="text-2xl font-bold font-[noto-normal]">জানালা</h2>
+            </div>
+          </div>
+          <div class="flex gap-3 mt-4 md:mt-0">
+            <button
+              onclick="smoothScroll('Fq-section')"
+              class="btn btn-md text-[#422AD5] border-[#422AD5] hover:bg-blue-700 hover:text-white"
+            >
+              <i class="fa-solid fa-circle-question"></i>FAQ
+            </button>
+            <button
+              onclick="smoothScroll('Vocabulary-Container')"
+              class="btn btn-md text-[#422AD5] border-[#422AD5] hover:bg-blue-700 hover:text-white"
+            >
+              <i class="fa-brands fa-leanpub"></i> Learn
+            </button>
+            <button
+              id="btn-logout"
+              class="btn btn-md text-[#422AD5] border-[#422AD5] hover:bg-blue-700 hover:text-white"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i>Logout
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero section start -->
+
+      <section id="hero-container" class="w-11/12 mx-auto">
+        <div class="w-full flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 space-y-3 text-center md:text-left">
+            <h1 class="text-3xl md:text-5xl font-bold">
+              <span class="text-blue-400">English</span> is Easy!!
+            </h1>
+            <p class="font-bold">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি
+              <br class="hidden md:block" />
+              যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
+              <br class="hidden md:block" />
+              Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+            </p>
+            <fieldset class="fieldset w-full md:w-xs p-4 rounded-box">
+              <input
+                id="username"
+                type="email"
+                class="input w-full"
+                value="shutshob"
+                placeholder="Enter your Email"
+              />
+              <input
+                id="password"
+                type="password"
+                class="input w-full"
+                value="123456"
+                placeholder="Password"
+              />
+              <button
+                id="login-btn"
+                class="btn btn-primary mt-4 w-full md:w-auto"
+              >
+                Get Started
+              </button>
+            </fieldset>
+          </div>
+          <div class="w-full md:w-1/2 mt-8 md:mt-0">
+            <img class="w-full" src="assets/hero-student.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="hero-container" class="w-11/12 mx-auto">
+        <div class="w-2/2 flex items-center">
+          <div class="w-1/2 space-y-3">
+            <h1 class="text-5xl font-bold">
+              <span class="text-blue-400">English</span> is Easy!!
+            </h1>
+            <p class="font-bold">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি <br />
+              যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের <br />
+              Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+            </p>
+
+            <fieldset class="fieldset w-xs p-4 rounded-box">
+              <input
+                id="username"
+                type="email"
+                class="input"
+                placeholder="Enter your Username"
+              />
+              <input
+                id="password"
+                type="password"
+                class="input"
+                placeholder="Enter your login Code (123456)"
+              />
+              <button id="login-btn" class="btn btn-primary mt-4">
+                Get Started
+              </button>
+            </fieldset>
+          </div>
+
+          <div class="w-1/2">
+            <img class="w-full" src="assets/hero-student.png" alt="" />
+          </div>
+        </div>
+      </section> -->
+    </header>
+    <main id="main-section" class="w-11/12 mx-auto mt-[100px]">
+      <!-- Let's Learn Vocabularies Section start -->
+      <div class="flex justify-center">
+        <span
+          id="loader"
+          class="loading loading-spinner loading-xl py-20 hidden"
+        ></span>
+      </div>
+      <section id="Vocabulary-Container" class="space-y-5 mb-20">
+        <h1 class="text-5xl text-center font-bold">
+          <span class="text-blue-400">Let's </span> Learn Vocabularies
+        </h1>
+
+        <div
+          id="lesson-catagoy"
+          class="flex flex-wrap gap-2 justify-center"
+        ></div>
+
+        <div
+          id="lesson-card"
+          class="grid grid-cols-1 md:grid-cols-3 gap-5 bg-base-200 py-10 px-10"
+        >
+          <div class="bg-base-200 text-center py-[64px] col-span-full">
+            <h1 class="text-[20px] text-[#79716B] mb-[12px]">
+              আপনি এখনো কোন Lesson Select করেন নাই
+            </h1>
+            <h1 class="text-[40px]">একটি Lesson Select করুন।</h1>
+          </div>
+        </div>
+        <!-- <div
+          id="lesson-card"
+          class="grid grid-cols-3 gap-5 bg-base-200 py-10 px-10"
+        >
+          <div class="bg-base-200 text-center py-[64px] col-span-full">
+            <h1 class="text-[20px] text-[#79716B] mb-[12px]">
+              আপনি এখনো কোন Lesson Select করেন নাই
+            </h1>
+            <h1 class="text-[40px]">একটি Lesson Select করুন।</h1>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- Freequently ask section start -->
+
+      <section id="Fq-section" class="mt-[100px] mb-[100px]">
+        <h1 class="text-5xl font-bold text-center mb-10">
+          <span class="text-blue-400">Frequently</span> Asked Questions
+        </h1>
+
+        <div
+          class="collapse collapse-arrow bg-base-100 border border-base-300 collapse-content"
+        >
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title font-semibold">
+            1. the difference between var, let, and const
+          </div>
+          <div class="collapse-content text-sm">
+            var : এটা আগে থেকেই undefined মান এসাইন করা থাকে । এবং চাইলে বারবার
+            মান পরিবর্তন করা যায়। এটা ES6 এর আগে ব্যবহার করা হতো । let : এটাও
+            বারবার মান বদলানো যায় এটা লেটেস্ট ES6 এ ব্যবহার করা হয় । const : এটা
+            একবার কোন মান এসাইন করলে সেটা বদলানো যায় না এটাও লেটেস্ট ES6 এ
+            ব্যবহার করা হয় ।
+          </div>
+        </div>
+        <div
+          class="collapse collapse-arrow bg-base-100 border border-base-300 collapse-content"
+        >
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            2. the difference between map(), forEach(), and filter()
+          </div>
+          <div class="collapse-content text-sm">
+            map() : এটার সাহায্যে কোন একটা Array ভিতর পরিবর্তন করা যায় । এবং এটা
+            সেই পরিবর্তিত উপাদানগুলো নতুন একটা এরের ভিতর রিটার্ন করে। forEach()
+            : এটা শুধু কোন একটা এরের ভিতর লুপ চালাই কিন্তু কোনকিছুই রিটার্ন করে
+            না। filter() : এটার দিয়ে কোন একটা এরে থেকে শর্তের মাধ্যমে নির্দিষ্ট
+            কিছু উপাদান খুজে বের করা যায় । এবং এটিও নতুন একটা এরের মাঝে সেই
+            উপাদান গুলো রিটার্ন করে।
+          </div>
+        </div>
+        <div
+          class="collapse collapse-arrow bg-base-100 border border-base-300 collapse-content"
+        >
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            3.explain arrow functions and how they are different from regular
+            functions
+          </div>
+          <div class="collapse-content text-sm">
+            Arrow function (=>) : হচ্ছে ছোট করে লেখা যায় (সংক্ষিপ্ত) এবং regular
+            function : হচ্ছে বড় সিনটেক্স এ লেখতে হয় । কিন্তু দুইটার কাজ একই রকম
+          </div>
+        </div>
+        <div
+          class="collapse collapse-arrow bg-base-100 border border-base-300 collapse-content"
+        >
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            4. how JavaScript Promises work
+          </div>
+          <div class="collapse-content text-sm">
+            JavaScript Promises হল অ্যাসিঙ্ক্রোনাস অপারেশনগুলির ফলাফল ম্যানেজ
+            করার একটি উপায়। এটি ৩টি অবস্থায় থাকতে পারে: Pending: অপারেশন চলছে।
+            Resolved: সফলভাবে সম্পন্ন হয়েছে। Rejected: কোনো ত্রুটি ঘটেছে।
+            .then() ব্যবহার করে সফল ফলাফল এবং .catch() ব্যবহার করে ত্রুটি
+            হ্যান্ডেল করা হয়।
+          </div>
+        </div>
+        <div
+          class="collapse collapse-arrow bg-base-100 border border-base-300 collapse-content"
+        >
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            5. how closures work in JavaScript
+          </div>
+          <div class="collapse-content text-sm">
+            JavaScript-এ closures হলো এমন একটি ফাংশন যা তার বাইরের ফাংশনের
+            ভেরিয়েবল কে অ্যাক্সেস করতে পারে
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-11/12 mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-center md:text-left mb-8 md:mb-0">
+          <div class="flex items-center justify-center md:justify-start mb-1">
+            <h2 class="text-2xl font-bold">ENGLISH</h2>
+            <img src="assets/logo.png" alt="" />
+            <h2 class="text-2xl font-bold">জানালা</h2>
+          </div>
+          <p class="font-bold">ইংরেজি শিখুন সহজে</p>
+          <p class="font-bold">Providing Shutshob Applications since 2025</p>
+        </div>
+        <div class="space-y-3 text-center">
+          <p class="font-bold text[24px]">Follow Us</p>
+          <div class="flex gap-2 justify-center">
+            <a
+              href="https://www.facebook.com/Shahriahasanutshob/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/shahriarutshob" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <footer class="w-11/12 mx-auto">
+      <div class="flex justify-between items-center">
+        <div>
+          <div class="flex items-center mb-1">
+            <h2 class="text-2xl font-bold">ENGLISH</h2>
+            <img src="assets/logo.png" alt="" />
+            <h2 class="text-2xl font-bold">জানালা</h2>
+          </div>
+          <p class="font-bold">ইংরেজি শিখুন সহজে</p>
+          <p class="font-bold">Providing Shutshob Applications since 2025</p>
+        </div>
+
+        <div class="space-y-3">
+          <p class="font-bold text[24px]">Follow Us</p>
+          <div class="flex gap-2">
+            <a
+              href="https://www.facebook.com/Shahriahasanutshob/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://instagram.com/shahriarutshob" target="_blank"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="cardDetails" class="modal">
+      <div class="modal-box">
+        <div id="cardModal"></div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn btn-primary">Complete Learning</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
